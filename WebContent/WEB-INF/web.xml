@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>emailmanager</display-name>
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>ListEmailServlet</servlet-name>
+  	<servlet-class>emailmanager.ListEmailServlet</servlet-class>
+    <init-param>
+    	<!-- chemin du fichier .txt contenant les adresses mail-->
+    	<param-name>file_path</param-name>
+    	<param-value>C:\\Users\\RimaZ\eclipse-workspace\\emailmanager\\src\\main\\java\\emailmanager\\adresses.txt</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ListEmailServlet</servlet-name>
+  	<url-pattern>/ListEmailServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
